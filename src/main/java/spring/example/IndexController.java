@@ -25,7 +25,7 @@ public class IndexController {
     /**
      * Controller function for the index HTML page.
      */
-    @RequestMapping("/")
+   /* @RequestMapping("/")
     public String index(Model model) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("MMM d yyyy : HH:mm:ss:SSS z");
         Date now = new Date();
@@ -33,7 +33,12 @@ public class IndexController {
         model.addAttribute("time", dateStr);
         System.out.println("in Controller");
         return "index";
-    }
+    } */
+	
+	@RequestMapping("/")
+	public String index(Model model) {  
+		return "setpw";
+	}
     
     @Autowired
     private Force force;
