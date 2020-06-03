@@ -7,19 +7,19 @@
 <title>Qualifyde:Smart Recruitment Application</title>
 <link href="/images/favicon.ico" type="image/x-icon" rel="shortcut icon" />
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" type="text/css" href="WEB-INF/vendors/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="WEB-INF/vendors/bootstrap/css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="assets/vendors/bootstrap/css/bootstrap-theme.min.css">
 <!-- Plugin CSS -->
-<link rel="stylesheet" type="text/css" href="WEB-INF/plugins/chosen/chosen.min.css" />
-<link rel="stylesheet" type="text/css" href="WEB-INF/plugins/timepicker/bootstrap-timepicker.min.css" />
-<link rel="stylesheet" type="text/css" href="WEB-INF/plugins/colorpicker/colorpicker.css" />
-<link rel="stylesheet" type="text/css" href="WEB-INF/plugins/datepicker/datepicker.css" />
-<link rel="stylesheet" type="text/css" href="WEB-INF/plugins/daterange/daterangepicker.css" />
-<link rel="stylesheet" type="text/css" href="WEB-INF/plugins/formswitch/css/bootstrap-switch.css" />
-<link rel="stylesheet" type="text/css" href="WEB-INF/plugins/tags/tagmanager.css" />
+<link rel="stylesheet" type="text/css" href="assets/plugins/chosen/chosen.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/plugins/timepicker/bootstrap-timepicker.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/plugins/colorpicker/colorpicker.css" />
+<link rel="stylesheet" type="text/css" href="assets/plugins/datepicker/datepicker.css" />
+<link rel="stylesheet" type="text/css" href="assets/plugins/daterange/daterangepicker.css" />
+<link rel="stylesheet" type="text/css" href="assets/plugins/formswitch/css/bootstrap-switch.css" />
+<link rel="stylesheet" type="text/css" href="assets/plugins/tags/tagmanager.css" />
 <!-- Custom CSS -->
-<link rel="stylesheet" type="text/css" href="WEB-INF/styles/sh-styles-astr.css">
-<link rel="stylesheet" type="text/css" href="WEB-INF/styles/sh-styles-purn.css">
+<link rel="stylesheet" type="text/css" href="assets/styles/sh-styles-astr.css">
+<link rel="stylesheet" type="text/css" href="assets/styles/sh-styles-purn.css">
 
 
   
@@ -32,8 +32,8 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	-->
 <!--[if lt IE 9]>
-		<script src="WEB-INF/scripts/html5shiv.min.js"></script>
-		<script src="WEB-INF/scripts/respond.min.js"></script>
+		<script src="assets/scripts/html5shiv.min.js"></script>
+		<script src="assets/scripts/respond.min.js"></script>
 	<![endif]-->
 </head>
 <!--<body class="varn-sh sidebar-mini fixed">-->
@@ -81,7 +81,7 @@
 				<h1>Set / Change Password<small> </small></h1>
 				
 				<!-- <div class="clientlogo">
-					<img src="WEB-INF/images/clientlogo.png" class="img-responsive" />
+					<img src="assets/images/clientlogo.png" class="img-responsive" />
 				</div> -->
 				<ol class="breadcrumb">
 					<!--<li><a href="javascript:void(0);"><i class="fa fa-plus-circle"></i> <div>Create Assessment</div></a></li>--> 
@@ -225,14 +225,14 @@
 	
 	
 	
-	<!--script src="WEB-INF/vendors/jquery/jquery-1.11.3.min.js"></script--><script src="WEB-INF/vendors/jquery/jquery-2.1.4.min.js">
-</script><script src="WEB-INF/vendors/jquery/jquery-ui.min.js">
-</script><script src="WEB-INF/vendors/bootstrap/js/bootstrap.min.js">
-</script><script src="WEB-INF/scripts/toastr.js">
-</script><script src="WEB-INF/scripts/ui-utils.js">
-</script><script src="WEB-INF/scripts/uniform.min.js">
-</script><script src="WEB-INF/scripts/main.js">
-</script><script type="text/javascript" src="WEB-INF/plugins/slimScroll/jquery.slimscroll.min.js">
+	<!--script src="assets/vendors/jquery/jquery-1.11.3.min.js"></script--><script src="assets/vendors/jquery/jquery-2.1.4.min.js">
+</script><script src="assets/vendors/jquery/jquery-ui.min.js">
+</script><script src="assets/vendors/bootstrap/js/bootstrap.min.js">
+</script><script src="assets/scripts/toastr.js">
+</script><script src="assets/scripts/ui-utils.js">
+</script><script src="assets/scripts/uniform.min.js">
+</script><script src="assets/scripts/main.js">
+</script><script type="text/javascript" src="assets/plugins/slimScroll/jquery.slimscroll.min.js">
 </script><script type="text/javascript">
 		jQuery(document).ready(function () {
 			// Init Theme Core 	  
@@ -241,16 +241,16 @@
 		});
 	</script>
 	<!-- plugins -->
-	<script type="text/javascript" src="WEB-INF/plugins/globalize/globalize.js"></script>
-	<script type="text/javascript" src="WEB-INF/plugins/chosen/chosen.jquery.min.js"></script>
-	<script type="text/javascript" src="WEB-INF/plugins/daterange/moment.min.js"></script>
-	<script type="text/javascript" src="WEB-INF/plugins/daterange/daterangepicker.js"></script>
-	<script type="text/javascript" src="WEB-INF/plugins/colorpicker/bootstrap-colorpicker.js"></script>
-	<script type="text/javascript" src="WEB-INF/plugins/timepicker/bootstrap-timepicker.min.js"></script>
-	<script type="text/javascript" src="WEB-INF/plugins/datepicker/bootstrap-datepicker.js"></script>
-	<script type="text/javascript" src="WEB-INF/plugins/formswitch/js/bootstrap-switch.min.js"></script>
-	<script type="text/javascript" src="WEB-INF/plugins/jquerymask/jquery.maskedinput.min.js"></script>
-	<script type="text/javascript" src="WEB-INF/plugins/tags/tagmanager.js"></script>
+	<script type="text/javascript" src="assets/plugins/globalize/globalize.js"></script>
+	<script type="text/javascript" src="assets/plugins/chosen/chosen.jquery.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/daterange/moment.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/daterange/daterangepicker.js"></script>
+	<script type="text/javascript" src="assets/plugins/colorpicker/bootstrap-colorpicker.js"></script>
+	<script type="text/javascript" src="assets/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/datepicker/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="assets/plugins/formswitch/js/bootstrap-switch.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/jquerymask/jquery.maskedinput.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/tags/tagmanager.js"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function () {
 
@@ -355,8 +355,8 @@
 			$(".eyescript").mask("~9.99 ~9.99 999");
 			$(".custom").mask("9.99.999.9999");
 		});
-	</script><!-- IE10 viewport hack for Surface/desktop Windows 8 bug --><script src="WEB-INF/scripts/ie10-viewport-bug-workaround.js">
-</script><script type="text/javascript" src="WEB-INF/scripts/app.js">
+	</script><!-- IE10 viewport hack for Surface/desktop Windows 8 bug --><script src="assets/scripts/ie10-viewport-bug-workaround.js">
+</script><script type="text/javascript" src="assets/scripts/app.js">
 </script><script type="text/javascript">
 		//$(window).on("load resize scroll click mouseup mousemove mousedown mouseleave submit",function(e){
 		//    var contentframewidth=$("#content_frame").width();
