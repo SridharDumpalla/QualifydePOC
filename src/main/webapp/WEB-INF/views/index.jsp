@@ -18,7 +18,8 @@
    a cached version. However, you can check the time and date:
    </p>
    <p>
-   Time/Date: ${time}
+   Time/Date: ${time} ${msg}
+   ${message}
    </p>
 </body>
 </html>

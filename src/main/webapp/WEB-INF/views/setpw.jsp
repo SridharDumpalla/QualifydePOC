@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Qualifyde:Smart Recruitment Application</title>
 <link href="/images/favicon.ico" type="image/x-icon" rel="shortcut icon" />
-<!-- Bootstrap CSS -->
+
 <link rel="stylesheet" type="text/css" href="/vendors/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="/vendors/bootstrap/css/bootstrap-theme.min.css">
 <!-- Plugin CSS -->
@@ -18,48 +18,72 @@
 <link rel="stylesheet" type="text/css" href="/plugins/formswitch/css/bootstrap-switch.css" />
 <link rel="stylesheet" type="text/css" href="/plugins/tags/tagmanager.css" />
 <!-- Custom CSS -->
-<link rel="stylesheet" type="text/css" href="/styles/sh-styles-astr.css">
-<link rel="stylesheet" type="text/css" href="/styles/sh-styles-purn.css">
 
+<link rel="stylesheet" type="text/css" href="/css/sh-styles-purn.css">
 
+<script type="text/javascript">
+function validate(){
+	 var newpassword= $("#nw").val();  
+	 var confirmpassword=$("#cw").val(); 
+	 $("#error_message").text()
+	// console.log(nw)
+	  //console.log(cw)
+	  
+	 if(newpassword==""&&confirmpassword==""){
+		 //alert("password must be match");
+	         $("#error_message").text("Please Fill The Password Section")
+	           return false;
+	}
+	  
+	 if(newpassword!=confirmpassword){
+		 //alert("password must be match");
+	         $("#error_message").text("Password Must be Match")
+	           return false;
+	}
+	else if(!(newpassword.length>=8) && !(confirmpassword.length>=8)){
+		//alert("password length must be 8 characters");
+		    $("#error_message").text("Password length must be minimum 8 characters")
+			return false;
+	}
+	else if(newpassword.match(/[A-z]/g)==null && confirmpassword.match(/[A-z]/g)==null){
+				//alert("atleast contains one letter");
+				$("#error_message").text("password  must contains atleast one letter ")
+				return false;
+	}
+	else if(newpassword.match(/[0-9]/)==null && confirmpassword.match(/[0-9]/)==null){
+					//alert("atleast contains one number");
+					$("#error_message").text("password contains atleast one number")
+					return false;
+	}
+					
+				
+			
+		
+}
+</script>
   
   
 
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	-->
-<!--[if lt IE 9]>
-		<script src="/scripts/html5shiv.min.js"></script>
-		<script src="/scripts/respond.min.js"></script>
-	<![endif]-->
+
+
 </head>
-<!--<body class="varn-sh sidebar-mini fixed">-->
+
 <body class="varn-sh fixed login-page login-page2">
 
 	<div class="wrapper">
-		<!-- Main Header -->
+		
 		<header class="main-header">
-			<!-- <div class="content-header-slider" title="Toggle Page Header"></div> --><!-- Header Navbar -->
+			
 			<nav id="headerbar_top" class="navbar navbar-static-top" role="navigation">
-				<!-- Left Nav Toggle Button--> 
-				<!--<div class="hamburgeraligner">
-					<a href="javascript:void(0);" id="sidebar_toggle" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-						<span class="sr-only">
-							Toggle navigation
-						</span>
-					</a>
-				</div>--> 
-				<!-- Left Nav Toggle Button-->
+				
+				
 				<div class="logoaligner">
 					<a href="dashboard.html" class="logo"><!-- mini logo for sidebar mini 50x50 pixels --> 
 					<span class="logo-mini hidden-md hidden-lg visible-xs visible-sm"> <img src="/images/qualifydelogosymbol.svg" border="0" alt="Qualifyde" title="Qualifyde"> </span> 
-					<!-- logo for regular state and mobile devices --> 
+	
 					<span class="logo-lg hidden-xs hidden-sm visible-md visible-lg"> <img src="/images/qualifydelogo.svg" border="0" alt="Qualifyde" title="Qualifyde"> </span> </a>
 				</div>
-				<!-- Navbar Right Menu -->
+				
 				<div class="navbar-custom-menu">
 					<ul class="nav navbar-nav">
 						<!-- Messages Menu Starts -->
@@ -84,14 +108,7 @@
 					<img src="/images/clientlogo.png" class="img-responsive" />
 				</div> -->
 				<ol class="breadcrumb">
-					<!--<li><a href="javascript:void(0);"><i class="fa fa-plus-circle"></i> <div>Create Assessment</div></a></li>--> 
-					<!--li><a href="javascript:void(0);"> Level-01 </a></li>
-						<li><a href="javascript:void(0);"> Level-02 </a></li--> 
-					<!--<li class="active">
-							<strong>
-								User Info
-							</strong>
-						</li>-->
+					
 						
 				</ol>
 			</section>
@@ -111,43 +128,48 @@
 					</div>
 					<!-- /.login-logo -->
 					<div class="login-box-body">
-						<!--<p class="login-box-msg">
-							Sign in to your account
-						</p>-->
-						<form action="javascript:void(0);" method="post">
+						
+
+
+
+<!-- ---------------------------------------------- Main form---------------------------------------------------------------------- -->
+						
+						<form  name="myfrom" onsubmit="return validate()" action="ChangePassword" method="post" >
 							<div class="row" style="padding-left: 15px;">
 								
 								
-								<div class="col-xs-12 padding-left-no">
-									<div class="row">
-										<label> &nbsp; <input class="radio" type="radio" name="optionsRadios" value="1" checked=""> <span class="text-danger">*</span> 8 characters </label><br/>
-										<label> &nbsp; <input class="radio" type="radio" name="optionsRadios" value="2" checked=""> <span class="text-danger">*</span> 1 letter </label><br/>
-										<label> &nbsp; <input class="radio" type="radio" name="optionsRadios" value="3" checked=""> <span class="text-danger">*</span> 1 number </label>
+								<div class="col-xs-12">
+									<div class="">
+									<label><span id="error_message" class="text-danger"></span></label><br/>
+										<label><span class="text-danger">*</span> 8 characters </label><br/>
+										<label> <span class="text-danger">*</span> 1 letter </label><br/>
+										<label><span class="text-danger">*</span> 1 number </label>
 									</div>
 									<br/>
 								</div>
 								
 								<div class="col-xs-12 padding-left-no">
 									<div class="padding-bottom-sm">
-										<!--<span class="padding-bottom-sm-addon"><i class="fa fa-user"></i></span>-->
-										<label class="control-label"><span class="text-danger">*</span> New Password </label>
-										<input class="form-control" type="password" placeholder="New Password" />
+										
+										<span class="text-danger">*</span> New Password </label>
+										<input name="NewPassword"  id="nw" class="form-control" type="password" placeholder="New Password" />
+										 
 									</div>
 								</div>
 								<div class="col-xs-12 padding-left-no">
 									<div class="padding-bottom-sm">
-										<!--<span class="padding-bottom-sm-addon"><i class="fa fa-user"></i></span>-->
-										<label class="control-label"><span class="text-danger">*</span> Confirm New Password </label>
-										<input class="form-control" type="password" placeholder="Confirm New Password" />
+										<span class="text-danger">*</span> Confirm New Password 
+										<input name="ConfirmNewPassword"  id="cw" class="form-control" type="password" placeholder="Confirm New Password" />
 									</div>
 								</div>
 								
 								
 								<div class="col-xs-12 padding-left-no">
 									<div class="padding-bottom-sm">
-										<button type="button" class="btn btn-primary btn-block btn-flat" onClick="location.href='login.html'">
-										Change Password
-									</button>
+	         <button type="submit" name="action"  value="Change Password" >Change Password</button>
+										<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+										
+							
 									</div>
 								</div>
 								<!--<div class="col-xs-6 padding-left-no">
@@ -157,8 +179,10 @@
 							</div>
 							
 						</form>
-
-					</div>
+						
+						
+						
+						</div>
 					<!-- /.login-box-body -->
 				</div>
 				<!-- /.login-box -->
@@ -355,14 +379,7 @@
 			$(".eyescript").mask("~9.99 ~9.99 999");
 			$(".custom").mask("9.99.999.9999");
 		});
-	</script><!-- IE10 viewport hack for Surface/desktop Windows 8 bug --><script src="/scripts/ie10-viewport-bug-workaround.js">
-</script><script type="text/javascript" src="/scripts/app.js">
-</script><script type="text/javascript">
-		//$(window).on("load resize scroll click mouseup mousemove mousedown mouseleave submit",function(e){
-		//    var contentframewidth=$("#content_frame").width();
-		//	document.getElementById('content_header').style.width=contentframewidth+'px';
-		//	document.getElementById('content_footer').style.width=contentframewidth+'px';
-		//});
+	
 
 		$("#inputform_base_but").click(function () {
 			$("#inputform_base").slideDown("fast", function () {
@@ -376,17 +393,7 @@
 			});
 		});
 
-		/*
-		$('.content-header-slider').click(function () {
-			if ($('body').hasClass('content-header-collapse')) {
-				$('body').removeClass('content-header-collapse');
-				$('.content-header').fadeIn(300);
-			} else {
-				$('body').addClass('content-header-collapse');
-				$('.content-header').fadeOut(300);
-			};
-		});
-		*/
+		
 	(function(window, $) {
             $(function() {
                 $('.btn, .treeview a, .box-group .box-header, .paginate_button a, .nav a').on('click', function(event) {
