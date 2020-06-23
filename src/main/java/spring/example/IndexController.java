@@ -1,78 +1,160 @@
-/** \file
- * 
- * Mar 21, 2018
- *
- * Copyright Ian Kaplan 2018
- *
- * @author Ian Kaplan, www.bearcave.com, iank@bearcave.com
- */
 package spring.example;
 
 
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import spring.example.dao.CandidateRepository;
 
 
+@Controller
 
 public class IndexController {
+	
+	
+	@Autowired
+	private CandidateRepository candidaterepo;
+	
+	
+ public Connection connect() throws SQLException {
+	 
+	 return DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "admin");
+	   }
     
-    /**
-     * Controller function for the index HTML page.
-     */
-	/* @RequestMapping("/")
-    public String index() {
-        
+     String uname;
+	 @RequestMapping("/candidate")
+    public String index(@RequestParam("username") String username) {
+		 this.uname=username;
+	 
+        System.out.println(username);
         return "setpw";
     } 
     
-    @GetMapping("/set")
-    public String login() {
-    	return "login";
-    }*/
-	
-	
-    //code for get the details of change password page
-	/*@RequestMapping(value = "/RegisterPage" , method=RequestMethod.GET)
-	public ModelAndView getChangePassworsPage() {
-		ModelAndView model = new ModelAndView("setpw");
-		return model;
-	}
-	
-	
-	
-	@RequestMapping(value = "/ChangePassword", method = RequestMethod.POST)
-	public ModelAndView changePassword(@RequestParam("NewPassword") String newPassword,
-			                           @RequestParam("ConfirmNewPassword") String confirmNewPassword) 
-	{
-		
-		 ModelAndView model =new  ModelAndView("model1");
-	model.addObject("message", "First Name:" +newPassword + "Last Name:"+confirmNewPassword);
-	System.out.println(newPassword);
-	System.out.println(confirmNewPassword);
-		 return model;*/
-		
-		
-		
-	//code for heroku integration
-	
-	
-	
-	
-	
-	
-	
-	
+	 @RequestMapping("/ChangePassword")
+	  public String saveCandidate(@RequestParam("NewPassword") String newpassword){
+	      System.out.println("method entry");
+	      System.out.println(newpassword);
+	      System.out.println(uname);
+		 String password = newpassword;
+		 String SQL1 ="select username,password from candidate  where username='pasampraveen11@gmail.com'";
+		 String SQL ="update candidate set password=? where username=?";
+			int affectedrows=0;
+			Connection myconnection = null;
+			try {
+				
+			 myconnection = connect();
+			 myconnection.setAutoCommit(true);
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			try  {
+				 PreparedStatement pstmt1 = myconnection.prepareStatement(SQL1);
+	           
 
-	
-	
-   /* @Autowired
-    private Force force;
+	          ResultSet result = pstmt1.executeQuery();
+	          while(result.next()){
+	        	  System.out.println("before--"+result.getString(1));
+	        	  System.out.println(result.getString(2));
+	          }
+	     
+			}catch(Exception e) {
+	        	  System.out.println();
+	          }
+	        
+			
+			try  {
+				PreparedStatement pstmt = myconnection.prepareStatement(SQL);
+		           
 
-    @RequestMapping("/accounts")
-    public List<Force.Account> accounts(OAuth2Authentication principal) {
-        return force.accounts (principal);
-    }*/
+	            pstmt.setString(1, password);
+	            pstmt.setString(2, uname);
 
-}
+	           affectedrows = pstmt.executeUpdate();
+	           System.out.println(affectedrows);
+              
+	        } catch (Exception ex) {
+	            System.out.println(ex.getMessage());
+	        }
+			
+			
+	           System.out.println(affectedrows);
+	           
+	           try  {
+              
+	        	   PreparedStatement pstmt1 = myconnection.prepareStatement(SQL1);
+		                
+
+		          ResultSet result2 = pstmt1.executeQuery();
+		          while(result2.next()){
+		        	  System.out.println(result2.getString(1));
+		        	  System.out.println(result2.getString(2));
+		        	  System.out.println(result2.getString(3));
+		          }
+		     
+              
+	        } catch (Exception e) {
+	            System.out.println(e.getMessage());
+	        }
+			
+	return "loginpage";   
+           }
+	 
+	 
+    /* @RequestMapping("/loginpg")
+     public String loginPage() {
+    	 return "loginpage";
+     }*/
+     
+     
+	 @RequestMapping("/login")
+	public String loginViewPage(@RequestParam("Email") String username,
+			                     @RequestParam("Password") String password,
+			                     Model model ) {
+		
+		 System.out.println("login page username:-"+username);
+		 System.out.println("login page password"+password);
+	    
+	     String SQL2 ="select username,password from candidate  where username=? AND password=?";
+	     try (Connection conn = connect();
+	                PreparedStatement pstmt = conn.prepareStatement(SQL2)) {
+
+	            pstmt.setString(1, username);
+	            pstmt.setString(2, password);
+
+	            ResultSet rs = pstmt.executeQuery();
+	            
+	            if(rs.next()){
+	            	System.out.println("new val"+rs.getString(1));
+	            	System.out.println("new val"+rs.getString(2));
+						return "homepage";
+					}
+					
+					
+
+	        
+	     }catch (SQLException ex) {
+	            System.out.println(ex.getMessage());
+	        
+			
+			}
+	        
+	 
+	     model.addAttribute("error", "Username and password not found!!!");
+		 return "loginpage";
+	 }
+	 
+	 
+	 
+	 
+ }

@@ -134,7 +134,7 @@ function validate(){
 
 <!-- ---------------------------------------------- Main form---------------------------------------------------------------------- -->
 						
-						<form  name="myfrom" onsubmit="return validate()" action="ChangePassword" method="post" >
+						<form   onsubmit="return validate()" action="ChangePassword" method="post" >
 							<div class="row" style="padding-left: 15px;">
 								
 								

@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
  
     @Entity
-	@Table(name = "candidate")
+	@Table(name = "Candidate__c")
 	public class Candidate  {
 	 
 	  
@@ -16,12 +16,12 @@ import javax.persistence.Table;
 	  @GeneratedValue(strategy = GenerationType.AUTO)
 	  private long id;
 	 
-	  @Column(name = "Username")
-	  private String Username;
+	  @Column(name = "username__c")
+	  private String username;
 	  
 	  
-	  @Column(name = "Password")
-	  private String Password;
+	  @Column(name = "password__c")
+	  private String password;
 
 
 	public long getId() {
@@ -35,29 +35,26 @@ import javax.persistence.Table;
 
 
 	public String getUsername() {
-		return Username;
+		return username;
 	}
 
 
 	public void setUsername(String username) {
-		Username = username;
+		this.username = username;
 	}
 
 
 	public String getPassword() {
-		return Password;
+		return password;
 	}
 
 
 	public void setPassword(String password) {
-		Password = password;
+		this.password = password;
 	}
 
 
-	@Override
-	public String toString() {
-		return "Candidate [id=" + id + ", Username=" + Username + ", Password=" + Password + "]";
-	}
+	
 
 
 	
