@@ -40,7 +40,7 @@ public class IndexController {
         return "setpw";
     } 
     
-	 @RequestMapping("/ChangePassword")
+	 @RequestMapping("/ChangePassword") 
 	  public String saveCandidate(@RequestParam("NewPassword") String newpassword){
 	      System.out.println("method entry");
 	      System.out.println(newpassword);

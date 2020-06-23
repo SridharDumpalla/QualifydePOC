@@ -7,6 +7,7 @@
 <title>Qualifyde:Smart Recruitment Application</title>
 <link href="/images/favicon.ico" type="image/x-icon" rel="shortcut icon" />
 
+<!-- Bootstrap CSS -->
 <link rel="stylesheet" type="text/css" href="/vendors/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="/vendors/bootstrap/css/bootstrap-theme.min.css">
 <!-- Plugin CSS -->
@@ -21,69 +22,45 @@
 
 <link rel="stylesheet" type="text/css" href="/css/sh-styles-purn.css">
 
-<script type="text/javascript">
-function validate(){
-	 var newpassword= $("#nw").val();  
-	 var confirmpassword=$("#cw").val(); 
-	 $("#error_message").text()
-	// console.log(nw)
-	  //console.log(cw)
-	  
-	 if(newpassword==""&&confirmpassword==""){
-		 //alert("password must be match");
-	         $("#error_message").text("Please Fill The Password Section")
-	           return false;
-	}
-	  
-	 if(newpassword!=confirmpassword){
-		 //alert("password must be match");
-	         $("#error_message").text("Password Must be Match")
-	           return false;
-	}
-	else if(!(newpassword.length>=8) && !(confirmpassword.length>=8)){
-		//alert("password length must be 8 characters");
-		    $("#error_message").text("Password length must be minimum 8 characters")
-			return false;
-	}
-	else if(newpassword.match(/[A-z]/g)==null && confirmpassword.match(/[A-z]/g)==null){
-				//alert("atleast contains one letter");
-				$("#error_message").text("password  must contains atleast one letter ")
-				return false;
-	}
-	else if(newpassword.match(/[0-9]/)==null && confirmpassword.match(/[0-9]/)==null){
-					//alert("atleast contains one number");
-					$("#error_message").text("password contains atleast one number")
-					return false;
-	}
-					
-				
-			
-		
-}
-</script>
+
   
   
 
-
-
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	-->
+<!--[if lt IE 9]>
+		<script src="assets/scripts/html5shiv.min.js"></script>
+		<script src="assets/scripts/respond.min.js"></script>
+	<![endif]-->
 </head>
-
+<!--<body class="varn-sh sidebar-mini fixed">-->
 <body class="varn-sh fixed login-page login-page2">
 
 	<div class="wrapper">
-		
+		<!-- Main Header -->
 		<header class="main-header">
-			
+			<!-- <div class="content-header-slider" title="Toggle Page Header"></div> --><!-- Header Navbar -->
 			<nav id="headerbar_top" class="navbar navbar-static-top" role="navigation">
-				
-				
+				<!-- Left Nav Toggle Button--> 
+				<!--<div class="hamburgeraligner">
+					<a href="javascript:void(0);" id="sidebar_toggle" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+						<span class="sr-only">
+							Toggle navigation
+						</span>
+					</a>
+				</div>--> 
+				<!-- Left Nav Toggle Button-->
 				<div class="logoaligner">
-					<a href="dashboard.html" class="logo"><!-- mini logo for sidebar mini 50x50 pixels --> 
+					<a href="home.html" class="logo"><!-- mini logo for sidebar mini 50x50 pixels --> 
 					<span class="logo-mini hidden-md hidden-lg visible-xs visible-sm"> <img src="/images/qualifydelogosymbol.svg" border="0" alt="Qualifyde" title="Qualifyde"> </span> 
-	
+					<!-- logo for regular state and mobile devices --> 
 					<span class="logo-lg hidden-xs hidden-sm visible-md visible-lg"> <img src="/images/qualifydelogo.svg" border="0" alt="Qualifyde" title="Qualifyde"> </span> </a>
-				</div> 
-				
+				</div>
+				<!-- Navbar Right Menu -->
 				<div class="navbar-custom-menu">
 					<ul class="nav navbar-nav">
 						<!-- Messages Menu Starts -->
@@ -91,7 +68,7 @@ function validate(){
 						<li class=""> <a href="www.qualifyde.com/#oursolution"> Our Solution </a> </li>
 						<li class=""> <a href="www.qualifyde.com/#aboutus"> About Us </a> </li>
 						<li class=""> <a href="www.qualifyde.com/#contactus"> Contact Us </a> </li>
-						<li class="margin-right-lg"> <button type="button" class="btn btn-primary btn-block btn-flat margin-top-md" onClick="location.href='dashboard.html'"> Log In </button> </li>
+						<li class="margin-right-lg"> <button type="button" class="btn btn-primary btn-block btn-flat margin-top-md" onClick="location.href='home.html'"> Log In </button> </li>
 					</ul>
 				</div>
 			</nav>
@@ -102,13 +79,20 @@ function validate(){
 			<div id="content_frame" class="content-frame">
 			<!-- Content Header (Page header) -->
 			<section id="content_header" class="content-header" style="background: rgba(200,200,200,.6);">
-				<h1>Set / Change Password<small> </small></h1>
+				<h1>Log In<small> </small></h1>
 				
 				<!-- <div class="clientlogo">
-					<img src="/images/clientlogo.png" class="img-responsive" />
+					<img src="assets/images/clientlogo.png" class="img-responsive" />
 				</div> -->
 				<ol class="breadcrumb">
-					
+					<!--<li><a href="javascript:void(0);"><i class="fa fa-plus-circle"></i> <div>Create Assessment</div></a></li>--> 
+					<!--li><a href="javascript:void(0);"> Level-01 </a></li>
+						<li><a href="javascript:void(0);"> Level-02 </a></li--> 
+					<!--<li class="active">
+							<strong>
+								User Info
+							</strong>
+						</li>-->
 						
 				</ol>
 			</section>
@@ -123,66 +107,64 @@ function validate(){
 					<div class="login-logo">
 						<!-- mini logo for sidebar mini 50x50 pixels -->
 						<div>
-							Set / Change Password
+							Log In
 						</div>
 					</div>
 					<!-- /.login-logo -->
-					<div class="login-box-body">
-						
-
-
-
-<!-- ---------------------------------------------- Main form---------------------------------------------------------------------- -->
-						
-						<form   onsubmit="return validate()" action="ChangePassword" method="post" >
+					<div class="login-box-body">   
+						<!--<p class="login-box-msg">
+							Sign in to your account
+						</p>-->
+						<form action="login" method="post">
 							<div class="row" style="padding-left: 15px;">
 								
 								
-								<div class="col-xs-12">
-									<div class="">
-									<label><span id="error_message" class="text-danger"></span></label><br/>
-										<label><span class="text-danger">*</span> 8 characters </label><br/>
-										<label> <span class="text-danger">*</span> 1 letter </label><br/>
-										<label><span class="text-danger">*</span> 1 number </label>
+								<div class="col-xs-12 padding-left-no">
+									<div class="padding-bottom-sm">
+								<c:if test="${not empty error}">
+									<div style="color:red;"><h5>${error}</h5></div>
+								</c:if>
+										<label class="control-label"><span class="text-danger">*</span> Email </label>
+										<input name="Email" class="form-control" type="email" placeholder="Email" />
+									</div>
+								</div>
+								<div class="col-xs-12 padding-left-no">
+									<div class="padding-bottom-sm">
+										<label class="control-label"><span class="text-danger">*</span> Password </label>
+										<input name="Password" class="form-control" type="password" placeholder="Password" />
 									</div>
 									<br/>
 								</div>
 								
-								<div class="col-xs-12 padding-left-no">
-									<div class="padding-bottom-sm">
-										
-										<span class="text-danger">*</span> New Password </label>
-										<input name="NewPassword"  id="nw" class="form-control" type="password" placeholder="New Password" />
-										 
+								<!--<div class="col-xs-12 padding-left-no">
+									<div class="col-xs-12 checkbox icheck">
+										<label> &nbsp;
+											<input type="checkbox">
+											I accept <span class="text-danger">*</span>, <a href="javascript:void(0)">Terms & Conditions</a> </label>
 									</div>
-								</div>
-								<div class="col-xs-12 padding-left-no">
-									<div class="padding-bottom-sm">
-										<span class="text-danger">*</span> Confirm New Password 
-										<input name="ConfirmNewPassword"  id="cw" class="form-control" type="password" placeholder="Confirm New Password" />
-									</div>
-								</div>
-								
-								
-								<div class="col-xs-12 padding-left-no">
-									<div class="padding-bottom-sm">
-	         <button type="submit" name="action"  value="Change Password" >Change Password</button>
-										<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-										
-							
-									</div>
-								</div>
-								<!--<div class="col-xs-6 padding-left-no">
-									<a href="login.html"><h5>Login</h5></a>
+									<br/>
+									<br/>&nbsp; 
 								</div>-->
+								<div class="col-xs-12 padding-left-no">
+									<div class="padding-bottom-sm">
+										<button name="action"  type="submit" class="btn btn-primary btn-block btn-flat" >
+										Log In
+									</button>
+									<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+									</div>
+								</div>
+								<div class="col-xs-12 padding-left-no text-center"><br/>
+									<a href="forgotpassword.html">Forgot Password?</a><br/><br/>
+									New to Qualifyde? <a href="index.html/#getstarted">Join now</a>
+								</div>
+								
+								
 								
 							</div>
 							
 						</form>
-						
-						
-						
-						</div>
+
+					</div>
 					<!-- /.login-box-body -->
 				</div>
 				<!-- /.login-box -->
@@ -249,14 +231,14 @@ function validate(){
 	
 	
 	
-	<!--script src="/vendors/jquery/jquery-1.11.3.min.js"></script--><script src="/vendors/jquery/jquery-2.1.4.min.js">
-</script><script src="/vendors/jquery/jquery-ui.min.js">
-</script><script src="/vendors/bootstrap/js/bootstrap.min.js">
-</script><script src="/scripts/toastr.js">
-</script><script src="/scripts/ui-utils.js">
-</script><script src="/scripts/uniform.min.js">
-</script><script src="/scripts/main.js">
-</script><script type="text/javascript" src="/plugins/slimScroll/jquery.slimscroll.min.js">
+	<!--script src="assets/vendors/jquery/jquery-1.11.3.min.js"></script--><script src="assets/vendors/jquery/jquery-2.1.4.min.js">
+</script><script src="assets/vendors/jquery/jquery-ui.min.js">
+</script><script src="assets/vendors/bootstrap/js/bootstrap.min.js">
+</script><script src="assets/scripts/toastr.js">
+</script><script src="assets/scripts/ui-utils.js">
+</script><script src="assets/scripts/uniform.min.js">
+</script><script src="assets/scripts/main.js">
+</script><script type="text/javascript" src="assets/plugins/slimScroll/jquery.slimscroll.min.js">
 </script><script type="text/javascript">
 		jQuery(document).ready(function () {
 			// Init Theme Core 	  
@@ -265,16 +247,16 @@ function validate(){
 		});
 	</script>
 	<!-- plugins -->
-	<script type="text/javascript" src="/plugins/globalize/globalize.js"></script>
-	<script type="text/javascript" src="/plugins/chosen/chosen.jquery.min.js"></script>
-	<script type="text/javascript" src="/plugins/daterange/moment.min.js"></script>
-	<script type="text/javascript" src="/plugins/daterange/daterangepicker.js"></script>
-	<script type="text/javascript" src="/plugins/colorpicker/bootstrap-colorpicker.js"></script>
-	<script type="text/javascript" src="/plugins/timepicker/bootstrap-timepicker.min.js"></script>
-	<script type="text/javascript" src="/plugins/datepicker/bootstrap-datepicker.js"></script>
-	<script type="text/javascript" src="/plugins/formswitch/js/bootstrap-switch.min.js"></script>
-	<script type="text/javascript" src="/plugins/jquerymask/jquery.maskedinput.min.js"></script>
-	<script type="text/javascript" src="/plugins/tags/tagmanager.js"></script>
+	<script type="text/javascript" src="assets/plugins/globalize/globalize.js"></script>
+	<script type="text/javascript" src="assets/plugins/chosen/chosen.jquery.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/daterange/moment.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/daterange/daterangepicker.js"></script>
+	<script type="text/javascript" src="assets/plugins/colorpicker/bootstrap-colorpicker.js"></script>
+	<script type="text/javascript" src="assets/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/datepicker/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="assets/plugins/formswitch/js/bootstrap-switch.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/jquerymask/jquery.maskedinput.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/tags/tagmanager.js"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function () {
 
@@ -379,7 +361,14 @@ function validate(){
 			$(".eyescript").mask("~9.99 ~9.99 999");
 			$(".custom").mask("9.99.999.9999");
 		});
-	
+	</script><!-- IE10 viewport hack for Surface/desktop Windows 8 bug --><script src="assets/scripts/ie10-viewport-bug-workaround.js">
+</script><script type="text/javascript" src="assets/scripts/app.js">
+</script><script type="text/javascript">
+		//$(window).on("load resize scroll click mouseup mousemove mousedown mouseleave submit",function(e){
+		//    var contentframewidth=$("#content_frame").width();
+		//	document.getElementById('content_header').style.width=contentframewidth+'px';
+		//	document.getElementById('content_footer').style.width=contentframewidth+'px';
+		//});
 
 		$("#inputform_base_but").click(function () {
 			$("#inputform_base").slideDown("fast", function () {
@@ -393,7 +382,17 @@ function validate(){
 			});
 		});
 
-		
+		/*
+		$('.content-header-slider').click(function () {
+			if ($('body').hasClass('content-header-collapse')) {
+				$('body').removeClass('content-header-collapse');
+				$('.content-header').fadeIn(300);
+			} else {
+				$('body').addClass('content-header-collapse');
+				$('.content-header').fadeOut(300);
+			};
+		});
+		*/
 	(function(window, $) {
             $(function() {
                 $('.btn, .treeview a, .box-group .box-header, .paginate_button a, .nav a').on('click', function(event) {
