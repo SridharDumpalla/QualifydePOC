@@ -1,4 +1,4 @@
-package spring.example.dao;
+package com.qualifyde.dao;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

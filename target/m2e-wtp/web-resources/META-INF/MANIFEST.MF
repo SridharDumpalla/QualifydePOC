@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
-Implementation-Title: heroku-demo
+Implementation-Title: qualifyde
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: Lenovo
-Implementation-Vendor-Id: com.example
+Implementation-Vendor-Id: com.qualifyde
 Build-Jdk: 1.8.0_251
-Implementation-URL: http://projects.spring.io/spring-boot/heroku-demo/
+Implementation-URL: http://projects.spring.io/spring-boot/qualifyde/
 Created-By: Maven Integration for Eclipse
 Implementation-Vendor: Pivotal Software, Inc.
 

@@ -1,4 +1,4 @@
-package spring.example;
+package com.qualifyde.controller;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,19 +7,19 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 
 @SpringBootApplication
-public class SpringBootExampleApplication  extends SpringBootServletInitializer {
+public class QualifydeApplication  extends SpringBootServletInitializer {
     
 	
 	
 	  @Override protected SpringApplicationBuilder
 	  configure(SpringApplicationBuilder application) { return
-	  application.sources(SpringBootExampleApplication.class);}
+	  application.sources(QualifydeApplication.class);}
 	 
 	
 	
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootExampleApplication.class, args);
+		SpringApplication.run(QualifydeApplication.class, args);
 	}
 
 

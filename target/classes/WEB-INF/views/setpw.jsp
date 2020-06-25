@@ -26,38 +26,28 @@ function validate(){
 	 var newpassword= $("#nw").val();  
 	 var confirmpassword=$("#cw").val(); 
 	 $("#error_message").text()
-	// console.log(nw)
-	  //console.log(cw)
-	  
-	 if(newpassword==""&&confirmpassword==""){
-		 //alert("password must be match");
-	         $("#error_message").text("Please Fill The Password Section")
+	
+	 if(newpassword=="" || confirmpassword==""){
+	         $("#error_message").text("Please fill the password section.")
 	           return false;
 	}
 	  
-	 if(newpassword!=confirmpassword){
-		 //alert("password must be match");
+	if(newpassword!=confirmpassword){
 	         $("#error_message").text("Password Must be Match")
 	           return false;
 	}
 	else if(!(newpassword.length>=8) && !(confirmpassword.length>=8)){
-		//alert("password length must be 8 characters");
 		    $("#error_message").text("Password length must be minimum 8 characters")
 			return false;
 	}
 	else if(newpassword.match(/[A-z]/g)==null && confirmpassword.match(/[A-z]/g)==null){
-				//alert("atleast contains one letter");
 				$("#error_message").text("password  must contains atleast one letter ")
 				return false;
 	}
 	else if(newpassword.match(/[0-9]/)==null && confirmpassword.match(/[0-9]/)==null){
-					//alert("atleast contains one number");
 					$("#error_message").text("password contains atleast one number")
 					return false;
-	}
-					
-				
-			
+	}		
 		
 }
 </script>
@@ -82,7 +72,7 @@ function validate(){
 					<span class="logo-mini hidden-md hidden-lg visible-xs visible-sm"> <img src="/images/qualifydelogosymbol.svg" border="0" alt="Qualifyde" title="Qualifyde"> </span> 
 	
 					<span class="logo-lg hidden-xs hidden-sm visible-md visible-lg"> <img src="/images/qualifydelogo.svg" border="0" alt="Qualifyde" title="Qualifyde"> </span> </a>
-				</div>
+				</div> 
 				
 				<div class="navbar-custom-menu">
 					<ul class="nav navbar-nav">
@@ -136,9 +126,9 @@ function validate(){
 						
 						<form   onsubmit="return validate()" action="ChangePassword" method="post" >
 							<div class="row" style="padding-left: 15px;">
-								
-								
-								<div class="col-xs-12">
+
+
+										<div class="col-xs-12">
 									<div class="">
 									<label><span id="error_message" class="text-danger"></span></label><br/>
 										<label><span class="text-danger">*</span> 8 characters </label><br/>
