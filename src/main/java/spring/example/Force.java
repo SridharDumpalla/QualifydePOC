@@ -1,4 +1,4 @@
-package com.qualifyde.controller;
+package spring.example;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
