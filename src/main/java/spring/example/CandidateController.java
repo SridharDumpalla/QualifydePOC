@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import spring.example.dao.Candidate;
 import spring.example.dao.CandidateRepository;
+import spring.example.dao.InterviewDetailRepository;
 
 
 @Controller
@@ -25,6 +26,9 @@ public class CandidateController {
 	
 	@Autowired
 	private CandidateRepository candidaterepo;
+	
+	@Autowired
+	private InterviewDetailRepository interviewDetailRepo;
 	
 	
 	  String uname;

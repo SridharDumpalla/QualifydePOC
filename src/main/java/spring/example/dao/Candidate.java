@@ -57,7 +57,7 @@ import javax.persistence.Table;
 	  private String  Name;
 	  
 	  @Column(name = "Mobile__c")
-	      private long Mobile;
+	      private Long Mobile;
 	  
 	  @Column(name = "OwnerId")
 	  private String  OwnerId;
@@ -66,7 +66,7 @@ import javax.persistence.Table;
 	  private String Password;
 	  
 	  @Column(name = "Pincode__c")
-	  private int Pincode;
+	  private Integer Pincode;
 	  
 	  @Column(name = "Skill__c")
 	  private String Skill;
@@ -82,6 +82,17 @@ import javax.persistence.Table;
 	  
 	  @Column(name = "Type__c")
 	  private String Type;
+	  
+	  @Column(name = "sfid")
+	  private String candidateSfid;
+	  
+	  public String getCandidateSfid() {
+		return candidateSfid;
+	}
+
+	public void setCandidateSfid(String candidateSfid) {
+		this.candidateSfid = candidateSfid;
+	}
 
 	public long getId() {
 		return id;
@@ -203,11 +214,11 @@ import javax.persistence.Table;
 		Name = name;
 	}
 
-	public long getMobile() {
+	public Long getMobile() {
 		return Mobile;
 	}
 
-	public void setMobile(long mobile) {
+	public void setMobile(Long mobile) {
 		Mobile = mobile;
 	}
 
@@ -227,11 +238,11 @@ import javax.persistence.Table;
 		Password = password;
 	}
 
-	public int getPincode() {
+	public Integer getPincode() {
 		return Pincode;
 	}
 
-	public void setPincode(int pincode) {
+	public void setPincode(Integer pincode) {
 		Pincode = pincode;
 	}
 
@@ -274,6 +285,8 @@ import javax.persistence.Table;
 	public void setType(String type) {
 		Type = type;
 	}
+
+	
 
   }
 

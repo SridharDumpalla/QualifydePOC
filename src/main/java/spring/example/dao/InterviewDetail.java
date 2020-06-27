@@ -61,6 +61,17 @@ public class InterviewDetail{
       
       @Column(name = "Status__c")
       private String Status;
+      
+      @Column(name = "sfid")
+      private String interviewDetailSfid;
+
+	public String getInterviewDetailSfid() {
+		return interviewDetailSfid;
+	}
+
+	public void setInterviewDetailSfid(String interviewDetailSfid) {
+		this.interviewDetailSfid = interviewDetailSfid;
+	}
 
 	public long getId() {
 		return id;

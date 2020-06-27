@@ -1,5 +1,4 @@
 package spring.example.dao;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -60,6 +59,17 @@ import javax.persistence.Table;
      
       @Column(name = "Title__c")
       private String Title;
+      
+      @Column(name = "sfid")
+      private String assessmentSfid;
+      
+      public String getAssessmentSfid() {
+		return assessmentSfid;
+	}
+
+	public void setAssessmentSfid(String assessmentSfid) {
+		this.assessmentSfid = assessmentSfid;
+	}
 
 	public long getId() {
 		return id;
