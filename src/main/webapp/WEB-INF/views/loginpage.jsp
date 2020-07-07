@@ -121,9 +121,9 @@
 								
 								<div class="col-xs-12 padding-left-no">
 									<div class="padding-bottom-sm">
-								<c:if test="${not empty error}">
+								
 									<div style="color:red;"><h5>${error}</h5></div>
-								</c:if>
+								
 										<label class="control-label"><span class="text-danger">*</span> Email </label>
 										<input name="Email" class="form-control" type="email" placeholder="Email" />
 									</div>

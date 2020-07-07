@@ -14,64 +14,46 @@ public class InterviewDetail{
   	  @GeneratedValue(strategy = GenerationType.AUTO)
   	  private long id;
 
-      @Column(name = "AssessmentDetail__c")
-      private String AssessmentDetail;
+      @Column(name = "Assessment_Detail__c")
+      private String assessmentDetail;
       
       @Column(name = "Assessment_Role__c")
-      private String Assessment_Role;
+      private String assessment_Role;
       
       @Column(name = "Candidate__c")
-      private String Candidate;
+      private String candidate;
       
       @Column(name = "Candidate_Email__c")
-      private String Candidate_Email;
-      
-      @Column(name = "CreatedById")
-      private String CreatedById;
+      private String candidate_Email;
       
       @Column(name = "Feedback_Detail__c")
-      private String Feedback_Detail;
-      
-      @Column(name = "Interview_Detail_External_Id__c")
-      private int Interview_Detail_External_Id;
+      private String feedback_Detail;
       
       @Column(name = "Name")
-      private String Name;
+      private String name;
       
       @Column(name = "Interviewer__c")
-      private String Interviewer;
-      
-      @Column(name = "LastModifiedById")
-      private String LastModifiedById;
+      private String interviewer;
       
       @Column(name = "Media__c")
-      private String Media;
-      
-      @Column(name = "OwnerId")
-      private String OwnerId;
-      
+      private String media;
+       
       @Column(name = "Recording_Link__c")
-      private String Recording_Link;
+      private String recording_Link;
       
       @Column(name = "Scheduled_Start_Time__c")
-      private String Scheduled_Start_Time;
+      private String scheduled_Start_Time;
       
       @Column(name = "Scheduled_End_Time__c")
-      private String Scheduled_End_Time;
+      private String scheduled_End_Time;
       
       @Column(name = "Status__c")
-      private String Status;
+      private String status;
       
       @Column(name = "sfid")
-      private String interviewDetailSfid;
-
-	public String getInterviewDetailSfid() {
-		return interviewDetailSfid;
-	}
-
-	public void setInterviewDetailSfid(String interviewDetailSfid) {
-		this.interviewDetailSfid = interviewDetailSfid;
-	}
+      private String sfid;
+      
+      private String assessmentId;
 
 	public long getId() {
 		return id;
@@ -82,133 +64,118 @@ public class InterviewDetail{
 	}
 
 	public String getAssessmentDetail() {
-		return AssessmentDetail;
+		return assessmentDetail;
 	}
 
 	public void setAssessmentDetail(String assessmentDetail) {
-		AssessmentDetail = assessmentDetail;
+		this.assessmentDetail = assessmentDetail;
 	}
 
 	public String getAssessment_Role() {
-		return Assessment_Role;
+		return assessment_Role;
 	}
 
 	public void setAssessment_Role(String assessment_Role) {
-		Assessment_Role = assessment_Role;
+		this.assessment_Role = assessment_Role;
 	}
 
 	public String getCandidate() {
-		return Candidate;
+		return candidate;
 	}
 
 	public void setCandidate(String candidate) {
-		Candidate = candidate;
+		this.candidate = candidate;
 	}
 
 	public String getCandidate_Email() {
-		return Candidate_Email;
+		return candidate_Email;
 	}
 
 	public void setCandidate_Email(String candidate_Email) {
-		Candidate_Email = candidate_Email;
-	}
-
-	public String getCreatedById() {
-		return CreatedById;
-	}
-
-	public void setCreatedById(String createdById) {
-		CreatedById = createdById;
+		this.candidate_Email = candidate_Email;
 	}
 
 	public String getFeedback_Detail() {
-		return Feedback_Detail;
+		return feedback_Detail;
 	}
 
 	public void setFeedback_Detail(String feedback_Detail) {
-		Feedback_Detail = feedback_Detail;
+		this.feedback_Detail = feedback_Detail;
 	}
 
-	public int getInterview_Detail_External_Id() {
-		return Interview_Detail_External_Id;
-	}
-
-	public void setInterview_Detail_External_Id(int interview_Detail_External_Id) {
-		Interview_Detail_External_Id = interview_Detail_External_Id;
-	}
-
+	
 	public String getName() {
-		return Name;
+		return name;
 	}
 
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
 
 	public String getInterviewer() {
-		return Interviewer;
+		return interviewer;
 	}
 
 	public void setInterviewer(String interviewer) {
-		Interviewer = interviewer;
-	}
-
-	public String getLastModifiedById() {
-		return LastModifiedById;
-	}
-
-	public void setLastModifiedById(String lastModifiedById) {
-		LastModifiedById = lastModifiedById;
+		this.interviewer = interviewer;
 	}
 
 	public String getMedia() {
-		return Media;
+		return media;
 	}
 
 	public void setMedia(String media) {
-		Media = media;
-	}
-
-	public String getOwnerId() {
-		return OwnerId;
-	}
-
-	public void setOwnerId(String ownerId) {
-		OwnerId = ownerId;
+		this.media = media;
 	}
 
 	public String getRecording_Link() {
-		return Recording_Link;
+		return recording_Link;
 	}
 
 	public void setRecording_Link(String recording_Link) {
-		Recording_Link = recording_Link;
+		this.recording_Link = recording_Link;
 	}
 
 	public String getScheduled_Start_Time() {
-		return Scheduled_Start_Time;
+		return scheduled_Start_Time;
 	}
 
 	public void setScheduled_Start_Time(String scheduled_Start_Time) {
-		Scheduled_Start_Time = scheduled_Start_Time;
+		this.scheduled_Start_Time = scheduled_Start_Time;
 	}
 
 	public String getScheduled_End_Time() {
-		return Scheduled_End_Time;
+		return scheduled_End_Time;
 	}
 
 	public void setScheduled_End_Time(String scheduled_End_Time) {
-		Scheduled_End_Time = scheduled_End_Time;
+		this.scheduled_End_Time = scheduled_End_Time;
 	}
 
 	public String getStatus() {
-		return Status;
+		return status;
 	}
 
 	public void setStatus(String status) {
-		Status = status;
+		this.status = status;
 	}
 
-    
+	public String getSfid() {
+		return sfid;
+	}
+
+	public void setSfid(String sfid) {
+		this.sfid = sfid;
+	}
+
+	public String getAssessmentId() {
+		return assessmentId;
+	}
+
+	public void setAssessmentId(String assessmentId) {
+		this.assessmentId = assessmentId;
+	}
+
+	
 
 }

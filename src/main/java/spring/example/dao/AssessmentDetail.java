@@ -14,62 +14,58 @@ import javax.persistence.Table;
    	  @GeneratedValue(strategy = GenerationType.AUTO)
    	  private long id;
 
-      @Column(name = "Assesment_Detail_External_Id__c")
-      private int Assesment_Detail_External_Id;
-      
       @Column(name = "Name")
-      private String Name;
+      private String name;
       
       @Column(name = "Certification__c")
-       private String Certification;
+       private String certification;
       
       @Column(name = "Client__c")
-       private String Client;
+       private String client;
       
       @Column(name = "Client_Website_URL__c")
-       private String Client_Website_URL;
-      
-     
-      @Column(name = "CreatedById")
-      private String CreatedById;  
-      
+       private String client_Website_URL;
+        
       @Column(name = "Description__c")
-      private String Description;
+      private String description;
       
-      @Column(name = "LastModifiedById")
-      private String LastModifiedById;
+      @Column(name = "Technologies__c")
+      private String technologies;
       
-      @Column(name = "OwnerId")
-      private String OwnerId;
+      @Column(name = "Skills__c")
+      private String skills;
       
       @Column(name = "Required_Education_Qualification__c")
-      private String Required_Education_Qualification;
+      private String required_Education_Qualification;
       
       @Column(name = "Required_End_Experience__c")
-      private String Required_End_Experience;
+      private String required_End_Experience;
       
       @Column(name = "Required_Start_Experience__c")
-      private String Required_Start_Experience;
+      private String required_Start_Experience;
       
       @Column(name = "Role__c")
-      private String Role;
+      private String role;
       
       @Column(name = "Status__c")
-      private String Status;
+      private String status;
      
       @Column(name = "Title__c")
-      private String Title;
+      private String title;
       
       @Column(name = "sfid")
-      private String assessmentSfid;
+      private String sfid;
       
-      public String getAssessmentSfid() {
-		return assessmentSfid;
+      
+     
+	public void setAssesmentDetailExternalId(String assesmentDetailExternalId) {
+		this.assesmentDetailExternalId = assesmentDetailExternalId;
 	}
 
-	public void setAssessmentSfid(String assessmentSfid) {
-		this.assessmentSfid = assessmentSfid;
-	}
+	private String assesmentDetailExternalId;
+       
+      
+      
 
 	public long getId() {
 		return id;
@@ -79,125 +75,116 @@ import javax.persistence.Table;
 		this.id = id;
 	}
 
-	public int getAssesment_Detail_External_Id() {
-		return Assesment_Detail_External_Id;
-	}
-
-	public void setAssesment_Detail_External_Id(int assesment_Detail_External_Id) {
-		Assesment_Detail_External_Id = assesment_Detail_External_Id;
-	}
-
 	public String getName() {
-		return Name;
+		return name;
 	}
 
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
 
 	public String getCertification() {
-		return Certification;
+		return certification;
 	}
 
 	public void setCertification(String certification) {
-		Certification = certification;
+		this.certification = certification;
 	}
 
 	public String getClient() {
-		return Client;
+		return client;
 	}
 
 	public void setClient(String client) {
-		Client = client;
+		this.client = client;
 	}
 
 	public String getClient_Website_URL() {
-		return Client_Website_URL;
+		return client_Website_URL;
 	}
 
 	public void setClient_Website_URL(String client_Website_URL) {
-		Client_Website_URL = client_Website_URL;
-	}
-
-	public String getCreatedById() {
-		return CreatedById;
-	}
-
-	public void setCreatedById(String createdById) {
-		CreatedById = createdById;
+		this.client_Website_URL = client_Website_URL;
 	}
 
 	public String getDescription() {
-		return Description;
+		return description;
 	}
 
 	public void setDescription(String description) {
-		Description = description;
+		this.description = description;
 	}
 
-	public String getLastModifiedById() {
-		return LastModifiedById;
+	public String getTechnologies() {
+		return technologies;
 	}
 
-	public void setLastModifiedById(String lastModifiedById) {
-		LastModifiedById = lastModifiedById;
+	public void setTechnologies(String technologies) {
+		this.technologies = technologies;
+	}
+	
+	public String getSkills() {
+		return skills;
 	}
 
-	public String getOwnerId() {
-		return OwnerId;
-	}
-
-	public void setOwnerId(String ownerId) {
-		OwnerId = ownerId;
+	public void setSkills(String skills) {
+		this.skills = skills;
 	}
 
 	public String getRequired_Education_Qualification() {
-		return Required_Education_Qualification;
+		return required_Education_Qualification;
 	}
 
 	public void setRequired_Education_Qualification(String required_Education_Qualification) {
-		Required_Education_Qualification = required_Education_Qualification;
+		this.required_Education_Qualification = required_Education_Qualification;
 	}
 
 	public String getRequired_End_Experience() {
-		return Required_End_Experience;
+		return required_End_Experience;
 	}
 
 	public void setRequired_End_Experience(String required_End_Experience) {
-		Required_End_Experience = required_End_Experience;
+		this.required_End_Experience = required_End_Experience;
 	}
 
 	public String getRequired_Start_Experience() {
-		return Required_Start_Experience;
+		return required_Start_Experience;
 	}
 
 	public void setRequired_Start_Experience(String required_Start_Experience) {
-		Required_Start_Experience = required_Start_Experience;
+		this.required_Start_Experience = required_Start_Experience;
 	}
 
 	public String getRole() {
-		return Role;
+		return role;
 	}
 
 	public void setRole(String role) {
-		Role = role;
+		this.role = role;
 	}
 
 	public String getStatus() {
-		return Status;
+		return status;
 	}
 
 	public void setStatus(String status) {
-		Status = status;
+		this.status = status;
 	}
 
 	public String getTitle() {
-		return Title;
+		return title;
 	}
 
 	public void setTitle(String title) {
-		Title = title;
+		this.title = title;
 	}
-    
-    
-   }
+
+	public String getSfid() {
+		return sfid;
+	}
+
+	public void setSfid(String sfid) {
+		this.sfid = sfid;
+	}
+
+}
