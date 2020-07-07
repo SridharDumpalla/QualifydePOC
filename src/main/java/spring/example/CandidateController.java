@@ -160,7 +160,7 @@ public class CandidateController {
 	@RequestMapping("/assessment")
 	public String assessmentPage() {
 		System.out.println("In root");
-		return "selfassessmentdetails";
+		return "assessmentdetails_self";
 	}
 
 	@RequestMapping("/assessmentDetails")
@@ -170,9 +170,14 @@ public class CandidateController {
 		System.out.println(id);
 		System.out.println(candidate.getType());
 		List<AssessmentDetail> assessmentDetailList = assessmentDetailRepo.findBySfid(id);
+		for(AssessmentDetail i : assessmentDetailList) {
+			System.out.println(i.getTechnologies());
+			System.out.println(i.getCertification());
+			System.out.println(i.getRequired_End_Experience());
+		}
 		model.addAttribute("assessmentDetailList", assessmentDetailList);
 		model.addAttribute("candidatetype", candidate.getType());
-		return "selfassessmentdetails";
+		return "assessmentdetails_self";
 	}
 	@RequestMapping("/interviewer")
 	 public String callRestUrl(Model model,HttpServletRequest request) {
@@ -273,7 +278,7 @@ public class CandidateController {
 	  
 	 System.out.println(responseBody);
 	  LOG.info("REST API response:" + responseBody);
-	  return "selfassessmentdetails";
+	  return "assessmentdetails_self";
 	 }
 	@CrossOrigin
     @RequestMapping(value = "/savedetails", method = RequestMethod.GET)

@@ -14,7 +14,7 @@ public class InterviewDetail{
   	  @GeneratedValue(strategy = GenerationType.AUTO)
   	  private long id;
 
-      @Column(name = "Assessment_Detail__c")
+      @Column(name = "assessmentdetail__c")
       private String assessmentDetail;
       
       @Column(name = "Assessment_Role__c")
